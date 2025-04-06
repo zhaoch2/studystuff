@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队激活与业绩增长实战指南</title>
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            border-radius: 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .subtitle {
+            font-size: 16px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        h2 {
+            color: #444;
+            border-bottom: 2px solid #6e8efb;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .model-diagram {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .model-diagram img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .interactive-section {
+            background: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .quiz-question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .quiz-options {
+            margin-left: 20px;
+        }
+        .quiz-option {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .quiz-option:hover {
+            background-color: #e6f2ff;
+        }
+        .quiz-feedback {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .action-item {
+            background: #e8f5e9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .tab-container {
+            margin: 20px 0;
+        }
+        .tab-buttons {
+            display: flex;
+            margin-bottom: -1px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background: #e0e0e0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        .tab-button.active {
+            background: white;
+            border-bottom: 2px solid #6e8efb;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 0 5px 5px 5px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .case-study {
+            background: #fff8e1;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+        }
+        .case-study h4 {
+            margin-top: 0;
+            color: #e65100;
+        }
+        .checklist {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 10px;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .preface {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #6e8efb;
+            font-style: italic;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>团队激活与业绩增长实战指南（M117赵超 20250406）</h1>
+        <p>AI时代下，如何通过激活团队实现业绩翻倍</p>
+    </div>
+
+    <div class="preface">
+        <h3>写在前面：</h3>
+        <p>这次课程因行程冲突只来听了半天，小小遗憾，因为仅从这半天能感受到课程的含金量和郝军龙老师的功底！周六下午半天印象最深的就是员工动力模型-有钱有爱有梦，尤其对于我这种创业公司，这个模型衍生的动作是特别接地气的做法。从老师的案例中，深切的感受到了系统性管理和系统视角的重要性，每个企业表面上要解决的A问题（比如股权期权），很大可能在整个系统中要先解决B问题（比如目标与分解）。</p>
+        <p>这次作业是在半天课程的学习推演和对老师课件的书面学习后总结的，比较浅显，可能这样也给了我一个慢慢琢磨和实践尝试的机会。也把几次课的内容前后联系着来消化理解应用，从上下同欲的经营哲学、到赞美倾听翻转、再到几乎每位老师都会讲到的华为经典的"方向大致正确，组织充满活力"的战略目标落地关键方针……</p>
+        <p>回到公司也跟团队小伙伴们快速的拉通了认知，这次作业也放在我公司的知识库当中，网页格式方便观看。</p>
+    </div>
+
+    <div class="card">
+        <h2>课程核心内容</h2>
+        <p>本课程专注于解决中小企业最常见的团队管理问题，提供一套简单有效的系统方法，帮助企业在AI时代实现业绩突破。</p>
+        
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab(event, 'tab1')">S-APC铃铛模型</button>
+                <button class="tab-button" onclick="openTab(event, 'tab2')">三大杠杆</button>
+                <button class="tab-button" onclick="openTab(event, 'tab3')">案例驱动</button>
+            </div>
+            
+            <div id="tab1" class="tab-content active">
+                <h3>S-APC铃铛模型</h3>
+                <p>这是一个简单实用的团队诊断工具，通过5大系统分析管理问题：</p>
+                <ul>
+                    <li><strong>战略(Strategy)</strong>：企业方向是否正确</li>
+                    <li><strong>目标(Aim)</strong>：目标设定是否合理</li>
+                    <li><strong>能力(Ability)</strong>：团队能力是否匹配</li>
+                    <li><strong>动力(Power)</strong>：激励机制是否有效</li>
+                    <li><strong>合力(Cohesion)</strong>：团队协作是否顺畅</li>
+                </ul>
+                <div class="model-diagram">
+                    <img src="https://via.placeholder.com/600x300?text=S-APC铃铛模型示意图" alt="S-APC铃铛模型">
+                </div>
+            </div>
+            
+            <div id="tab2" class="tab-content">
+                <h3>三大杠杆</h3>
+                <p>课程聚焦三个最有效的管理杠杆：</p>
+                <div class="action-item">
+                    <h4>1. 分钱（激励制度）</h4>
+                    <p>设计"跳一跳够得着"的激励机制，让员工有动力超额完成目标。</p>
+                </div>
+                <div class="action-item">
+                    <h4>2. 分工（结构调整）</h4>
+                    <p>优化组织架构，消除部门壁垒，提高协作效率。</p>
+                </div>
+                <div class="action-item">
+                    <h4>3. 分梦（文化塑造）</h4>
+                    <p>建立共同愿景，让员工认同企业使命，激发内在动力。</p>
+                </div>
+            </div>
+            
+            <div id="tab3" class="tab-content">
+                <h3>案例驱动</h3>
+                <p>课程包含多个真实企业案例，展示如何用简单管理动作撬动增长：</p>
+                
+                <div class="case-study">
+                    <h4>案例1：生鲜连锁企业</h4>
+                    <p>通过调整店长激励机制，将固定工资改为"基础工资+业绩提成"，3个月内单店业绩增长40%。</p>
+                </div>
+                
+                <div class="case-study">
+                    <h4>案例2：法务服务集团</h4>
+                    <p>重组销售与客服团队架构，建立跨部门协作机制，年度业绩增长300%。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>课程最大亮点</h2>
+        <div class="highlight">
+            <p><strong>"接地气的系统解法"</strong>：不搞复杂理论，直接解决"员工躺平、部门打架、老板累死"三大痛点。</p>
+        </div>
+        
+        <ul class="checklist">
+            <li><strong>不搞虚的</strong>：聚焦"分钱、分工、分梦"三大杠杆，直击问题核心</li>
+            <li><strong>模型简单</strong>：5分钟学会铃铛模型，快速诊断团队瓶颈</li>
+            <li><strong>结果导向</strong>：案例企业通过调整激励或结构，当年业绩增长40%-300%</li>
+            <li><strong>可复制性强</strong>：方法适用于中小企业，无需大投入</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>作为一家教育创业公司，课程给我的启发</h2>
+        
+        <div class="interactive-section">
+            <h3>团队激活：别让老师"躺平"</h3>
+            <p>作为教育机构，教师是核心资产。如何激活教师团队？</p>
+            
+            <div class="quiz-question">你的教师团队最可能缺乏的是：</div>
+            <div class="quiz-options">
+                <div class="quiz-option" onclick="showFeedback(this, 'correct')">A. 清晰的晋升路径和职业发展</div>
+                <div class="quiz-option" onclick="showFeedback(this, 'incorrect')">B. 更多的团建活动</div>
+                <div class="quiz-option" onclick="showFeedback(this, 'incorrect')">C. 更严格的考勤制度</div>
+            </div>
+            <div id="feedback1" class="quiz-feedback">
+                在教育培训行业，教师最看重的是职业发展空间。建立清晰的晋升通道比团建活动更能留住人才。
+            </div>
+            
+            <div class="action-item">
+                <h4>行动建议：</h4>
+                <p>设计"教师成长计划"：</p>
+                <ul>
+                    <li>初级教师 → 中级教师 → 高级教师 → 教研主管</li>
+                    <li>每级对应明确的薪资涨幅和能力要求</li>
+                    <li>提供定期培训支持教师成长</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="interactive-section">
+            <h3>目标管理：SMART原则应用</h3>
+            <p>教育机构的目标设定要兼顾商业性和教育性。</p>
+            
+            <div class="quiz-question">以下哪个目标设定更合理？</div>
+            <div class="quiz-options">
+                <div class="quiz-option" onclick="showFeedback(this, 'incorrect')">A. "提高教学质量"</div>
+                <div class="quiz-option" onclick="showFeedback(this, 'correct')">B. "暑期班续课率达到75%，家长满意度达到90%"</div>
+                <div class="quiz-option" onclick="showFeedback(this, 'incorrect')">C. "成为最好的教育机构"</div>
+            </div>
+            <div id="feedback2" class="quiz-feedback">
+                选项B符合SMART原则：具体(Specific)、可衡量(Measurable)、可实现(Achievable)、相关性(Relevant)、有时限(Time-bound)。
+            </div>
+        </div>
+        
+        <div class="interactive-section">
+            <h3>合力打造：消灭"部门墙"</h3>
+            <p>教育机构常见的部门协作问题：</p>
+            <ul>
+                <li>教研部只关注课程设计，不考虑市场接受度</li>
+                <li>销售部只管签单，不关注教学质量</li>
+                <li>教学部抱怨销售过度承诺</li>
+            </ul>
+            
+            <div class="action-item">
+                <h4>解决方案：</h4>
+                <p><strong>建立共同考核指标</strong>：</p>
+                <ul>
+                    <li>将"续课率"同时纳入教学部和销售部KPI</li>
+                    <li>设立"跨部门协作奖"</li>
+                    <li>每月举办"客户声音"分享会，让各部门了解终端用户反馈</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>CEO自查清单</h2>
+        <p>用铃铛模型检查你的团队：</p>
+        
+        <div class="tab-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab(event, 'check1')">战略</button>
+                <button class="tab-button" onclick="openTab(event, 'check2')">目标</button>
+                <button class="tab-button" onclick="openTab(event, 'check3')">能力</button>
+                <button class="tab-button" onclick="openTab(event, 'check4')">动力</button>
+                <button class="tab-button" onclick="openTab(event, 'check5')">合力</button>
+            </div>
+            
+            <div id="check1" class="tab-content active">
+                <h3>战略检查</h3>
+                <ul class="checklist">
+                    <li>是否明确了机构的差异化定位？</li>
+                    <li>课程体系是否符合未来教育趋势？</li>
+                    <li>是否有清晰的3年发展路径？</li>
+                </ul>
+            </div>
+            
+            <div id="check2" class="tab-content">
+                <h3>目标检查</h3>
+                <ul class="checklist">
+                    <li>年度目标是否分解到季度/月度？</li>
+                    <li>目标是否既有挑战性又可实现？</li>
+                    <li>员工是否清楚自己的目标与机构目标的关系？</li>
+                </ul>
+            </div>
+            
+            <div id="check3" class="tab-content">
+                <h3>能力检查</h3>
+                <ul class="checklist">
+                    <li>教师培训体系是否完善？</li>
+                    <li>是否有能力评估机制？</li>
+                    <li>是否建立了人才梯队？</li>
+                </ul>
+            </div>
+            
+            <div id="check4" class="tab-content">
+                <h3>动力检查</h3>
+                <ul class="checklist">
+                    <li>薪酬是否比竞品有竞争力？</li>
+                    <li>是否有清晰的晋升通道？</li>
+                    <li>非物质激励是否有效？</li>
+                </ul>
+            </div>
+            
+            <div id="check5" class="tab-content">
+                <h3>合力检查</h3>
+                <ul class="checklist">
+                    <li>各部门目标是否协同？</li>
+                    <li>跨部门协作流程是否顺畅？</li>
+                    <li>是否存在推诿扯皮现象？</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>一句话总结</h2>
+        <div class="highlight" style="text-align: center; font-size: 20px; padding: 20px;">
+            <p><strong>用铃铛模型找到团队最卡的地方，砸钱、砸梦想、砸简单规则，业绩就能翻！</strong></p>
+        </div>
+        
+        <div class="action-item">
+            <h4>立即行动：</h4>
+            <p>本周就做这三件事：</p>
+            <ol>
+                <li>用铃铛模型诊断团队最薄弱的环节</li>
+                <li>设计一个"跳一跳够得着"的激励方案</li>
+                <li>召开愿景分享会，让团队理解机构的使命</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+            }
+            
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(tabName).className += " active";
+            evt.currentTarget.className += " active";
+        }
+        
+        function showFeedback(element, type) {
+            var feedback = element.parentElement.nextElementSibling;
+            var allOptions = element.parentElement.querySelectorAll('.quiz-option');
+            
+            // 移除所有选项的高亮
+            allOptions.forEach(function(opt) {
+                opt.style.backgroundColor = '';
+            });
+            
+            // 高亮当前选项
+            if (type === 'correct') {
+                element.style.backgroundColor = '#d4edda';
+            } else {
+                element.style.backgroundColor = '#f8d7da';
+            }
+            
+            // 显示反馈
+            feedback.style.display = 'block';
+            feedback.className = 'quiz-feedback ' + type;
+        }
+    </script>
+</body>
+</html>
